@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+  SMART SENSOR FUSION LAB · 智慧信息融合实验室
+  ---------------------------------------------------------------------
+  ✏️ 日常维护改这些 · routine edits happen here:
+     assets/js/content/news.js   新闻/事件 news & events
+     assets/js/content/pubs.js   论文 publications
+     assets/js/content/team.js   团队 team members
+     assets/js/config.js         设置(视频/大小/标识) settings
+  🔧 引擎与样式（一般不动）· engine & styles (rarely touched):
+     assets/js/app.js · assets/css/style.css · 本文件 this file
+  📖 完整指南 · full guide: README.md
+  ⚠️ 发布修改后：把本文件里所有 ?v=43 数字加一（强制浏览器刷新缓存）
+     After publishing edits: bump every ?v=43 number here by one.
+  ===================================================================== -->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='5' y='5' width='14' height='14' rx='2' transform='rotate(45 12 12)' fill='none' stroke='%2339d6e9' stroke-width='2'/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Sensor Fusion Research Laboratory</title>
+<link rel="stylesheet" href="assets/css/style.css?v=43">
+</head>
+<body>
+
+<div class="fx" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+
+<div class="caption"><p data-en="SELECT A CELL · DRAG TO FLIP OR TURN">选 择 方 块 进 入 · 拖 动 翻 转</p></div>
+
+<header class="topbar">
+  <a class="brand" href="#">
+    <span class="mark"></span>
+    <span class="name">SMART SENSOR FUSION LAB</span>
+    <span class="cn" data-en="UNMANNED SYSTEMS INFORMATION FUSION">无人系统信息融合</span>
+  </a>
+  <div class="right"><span data-en="SJTU · SHANGHAI JIAO TONG UNIVERSITY">上海交通大学</span> <button class="langbtn themebtn" type="button" title="Light / Dark">◑</button><button class="langbtn" id="langT1" type="button">EN</button></div>
+</header>
+
+<header class="siteheader" id="siteheader">
+  <a class="brand" href="#" id="shBrand">
+    <span class="mark"></span>
+    <span class="name" id="shName">SMART SENSOR FUSION LABORATORY</span>
+  </a>
+  <nav id="shNav">
+    <a data-page="home" class="on" data-en="HOME">首页</a>
+    <a data-page="people" data-en="PEOPLE">团队</a>
+    <a data-page="research" data-en="RESEARCH">研究</a>
+    <a data-page="contact" data-en="CONTACT US">联系我们</a>
+    <button class="langbtn themebtn" type="button" title="Light / Dark">◑</button><button class="langbtn" id="langT2" type="button">EN</button><button class="cubeback" id="cubeBack" type="button" title="Back to the cube" aria-label="Back to the cube"><span class="mark"></span></button>
+  </nav>
+</header>
+
+<main>
+  <div class="zone" id="zone">
+    <div class="lghost" aria-hidden="true">FUSION</div>
+    <div class="anchor" id="anchor">
+      <div class="scene" id="scene">
+        <div class="cube-wrap">
+          <div class="cube" id="cube"></div>
+        </div>
+        <div class="shadow"></div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="panel" id="panel" aria-live="polite">
+
+    <div class="tag" id="pTag"></div>
+    <h2 id="pTitle"></h2>
+    <p id="pText"></p>
+    <a class="go" id="pGo" href="#" data-en="ENTER →">点击进入 →</a>
+
+    <!-- ============ LAB website ============ -->
+    <div class="site" id="labSite">
+      <div class="fx2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+      <!-- HOME -->
+      <div class="page on" id="page-home">
+        <section class="hero" id="top">
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="media/Background_viz.mp4" type="video/mp4">
+          </video>
+          <div class="veil"></div>
+          <div class="ghost" id="heroGhost">FUSION</div>
+          <div class="hero-right">
+            <div class="tag" data-en="SJTU · SCHOOL OF ELECTRONIC INFORMATION AND ELECTRICAL ENGINEERING">上海交通大学 · 电子信息与电气工程学院</div>
+            <h1>Smart Sensor Fusion Laboratory</h1>
+            <p class="sum" data-en="Based at SJTU's School of Electronic Information and Electrical Engineering, partnering with world-class equipment makers, sensor suppliers, scenario owners and standard bodies — real-time smart perception for closed professional scenarios such as airports, ports, mines, trucks and specialty hospitals: from novel sensor design to fusion algorithms, target tracking and edge IoT platforms.">依托上海交通大学电子信息与电气工程学院，联合世界一流的设备制造商、传感器供应商、场景方及标准制定方 — 专注机场、港口、矿山、卡车及专业医院等封闭专精场景的实时智慧感知系统：从新型传感器设计到融合算法、目标追踪与边缘物联平台。</p>
+          </div>
+        </section>
+
+        <section class="sect" id="core">
+          <div class="sec" data-en="CORE TECHNOLOGY">核心技术</div>
+          <div class="overview">
+            <p data-en="Five-layer smart fusion technology: object fusion, point-cloud fusion, cognitive fusion, staged fusion and hybrid fusion. Sensing-control co-design — perception, prediction and sensor parameter control (soft control only) — producing a 7-D world model: position, dynamics, shape, class and spatio-temporal association. Toward the new frontier of spatial intelligence, the lab advances Agentic Fusion — a framework-level evolution of information fusion beyond algorithms and systems.">智慧信息融合五层技术：目标融合、点云融合、认知融合、分阶融合、混合融合。围绕感控一体化设计 — 感知、预测、传感器参数控制（仅软控制），产生 7-D 世界模型：位置、动态、形态、类别及时空关联。面向空间智能的新前沿，实验室提出 Agentic Fusion 智能体融合框架，推动信息融合从算法与系统层级迈向框架层级。</p>
+          </div>
+          <div class="vision">
+          <i data-en="THE LAB'S VISION">实 验 室 愿 景</i>
+          <b data-en="Agentic Fusion Framework">Agentic Fusion · 智能体融合框架</b>
+          <p data-en="AI is moving from natural-language models toward physical-world models, making spatial intelligence the new frontier: intelligent systems need accurate, reliable, real-time spatio-temporal representations, and industry needs integrated solutions that accommodate data, algorithms and computing power for scalable, replicable deployment. To this end, the lab advances Agentic Fusion — an ontological fusion ecosystem: FusionBase provides the unified data &amp; knowledge representation layer, Fusers perform cross-source integration and inference, and Sensor Fusion Units (SFUs) handle modular sensing and local processing — enabling cross-scenario modular deployment, standardized verification &amp; validation, and replicable intelligent-system design.">人工智能正从自然语言模型迈向物理世界模型，空间智能成为新前沿：智能系统需要准确、可靠、实时的时空表征，产业界也需要能容纳数据、算法与算力、支持规模化复制的一体化系统方案。为此，实验室提出 Agentic Fusion — 面向空间智能与物理世界模型的本体化融合生态：FusionBase 提供统一的数据与知识表示层，Fuser 负责跨源信息集成与推理，SFU 传感融合单元承担模块化感知与本地处理 — 支撑跨场景、跨平台的模块化部署、标准化验证（V&amp;V）与可复制的智能系统设计。</p>
+        </div>
+
+          <div class="rgrid" style="margin-top:18px">
+            <div class="cell2"><b data-en="Novel Sensor Design">新型传感器设计</b><span data-en="Novel sensors for real-time perception in closed professional scenarios.">面向封闭专精场景的实时感知新型传感器设计。</span></div>
+            <div class="cell2"><b data-en="Smart Fusion Algorithms">智慧信息融合算法</b><span data-en="Fusion algorithms balancing data, algorithms and computing power.">数据、算法与算力综合考量的智慧信息融合算法。</span></div>
+            <div class="cell2"><b data-en="Recognition, Tracking &amp; Localization">目标识别与追踪定位</b><span data-en="Target recognition, tracking and localization for unmanned systems.">面向无人系统的目标识别、追踪与定位。</span></div>
+            <div class="cell2"><b data-en="Edge Fusion &amp; IoT Platforms">边缘融合中心与物联平台</b><span data-en="Edge fusion centers and IoT platforms for transport, medical and logistics.">服务交通、医疗与物流行业的边缘融合中心及物联平台。</span></div>
+          </div>
+        
+          <div class="subsec" data-en="ONGOING PROJECTS">当前项目</div>
+          <div class="rgrid" id="projGrid"></div>
+        </section>
+
+        <section class="sect" id="partners">
+          <div class="sec" data-en="COLLABORATIONS">合作</div>
+          <div class="overview">
+            <p data-en="Built on core fusion technology, long industrial practice and hard-tech theory, we cooperate openly and deeply with academia and industry — sensor makers, equipment makers, scenario owners, testers and joint standard bodies.">依托信息融合核心技术、长期工业实践与硬科技理论积累，以开放的心态与学术界及工业界展开深入合作。合作方包括传感器商、设备商、场景方、测试方及标准联合定制方。</p>
+          </div>
+          <div class="subsec" data-en="INDUSTRIAL">产业合作</div>
+        <div class="rgrid">
+            <a class="cell2 lcell" href="http://www.comac.cc/" target="_blank" rel="noopener"><b data-en="COMAC ↗">中国商飞 ↗</b><span data-en="Main body of the national large-aircraft program and the carrier of civil-aircraft industrialization.">国家大型飞机重大专项主体，民用飞机产业化的主要载体。</span></a>
+            <a class="cell2 lcell" href="https://www.szairport.com/" target="_blank" rel="noopener"><b data-en="Shenzhen Airport ↗">深圳机场 ↗</b><span data-en="International aviation hub and a model of smart-airport construction with unique digital-transformation experience.">国际航空枢纽，民航智慧机场建设典范，独特的数字化转型经验。</span></a>
+            <a class="cell2 lcell" href="https://www.ciri.ac.cn" target="_blank" rel="noopener"><b data-en="Automotive Safety Tech ↗">汽车安全技术公司 ↗</b><span data-en="Joint development of testing, evaluation and safety rating for ADAS and on-board sensor systems.">合作开发辅助驾驶系统与车载传感器的检测、评估与安全评级。</span></a>
+            <a class="cell2 lcell" href="https://zhuanlan.zhihu.com/p/112466549" target="_blank" rel="noopener"><b data-en="Heavy-Truck Giants ↗">重型卡车巨头 ↗</b><span data-en="Co-developing localized unmanned heavy trucks toward sustainable unmanned transport.">合作开发中国本土化无人重卡，迈向可持续无人运输系统。</span></a>
+          </div>
+                  <div class="subsec" data-en="ACADEMIC">学术合作</div>
+          <div class="mapph" id="acadMap">
+            <span data-en="Academic collaboration map — coming soon">学术合作地图 · 筹备中</span>
+          </div>
+        </section>
+
+        <section class="sect" id="news">
+          <div class="sect-head">
+            <div class="sec" data-en="NEWS">新闻</div>
+            <button class="btn more" data-wrap="newsWrap" data-strip="newsStrip" type="button">更多 ↓</button>
+          </div>
+          <div class="cards" id="newsHi"></div>
+          <div class="tl-wrap" id="newsWrap">
+            <div class="tl-tools">
+              <button type="button" data-strip="newsStrip" data-dir="-1">‹</button>
+              <button type="button" data-strip="newsStrip" data-dir="1">›</button>
+            </div>
+            <div class="tl-strip" id="newsStrip"></div>
+          </div>
+        </section>
+
+        <section class="sect" id="events">
+          <div class="sect-head">
+            <div class="sec" data-en="EVENTS">事件</div>
+            <button class="btn more" data-wrap="eventsWrap" data-strip="eventsStrip" type="button">更多 ↓</button>
+          </div>
+          <div class="cards" id="eventsHi"></div>
+          <div class="tl-wrap" id="eventsWrap">
+            <div class="tl-tools">
+              <button type="button" data-strip="eventsStrip" data-dir="-1">‹</button>
+              <button type="button" data-strip="eventsStrip" data-dir="1">›</button>
+            </div>
+            <div class="tl-strip" id="eventsStrip"></div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- PEOPLE -->
+      <div class="page sidepage" id="page-people">
+        <section class="sect" id="pp-intro" style="padding-bottom:8px">
+          <div class="sec" data-en="PEOPLE">团队</div>
+          <div class="overview">
+            <p data-en="Led by Director Ting Yuan, the laboratory gathers researchers in information fusion, sensor design and unmanned systems.">实验室由主任袁汀领导，汇聚信息融合、传感器设计与无人系统方向的研究人员。</p>
+          </div>
+        </section>
+        <section class="sect" id="pe-prof" style="padding-top:26px">
+          <div class="sec" data-en="PROFESSORS">教授</div>
+          <div class="pgrid"></div>
+        </section>
+        <section class="sect" id="pe-collab" style="padding-top:26px">
+          <div class="sec" data-en="COLLABORATORS">合作学者</div>
+          <div class="pgrid"></div>
+        </section>
+        <section class="sect" id="pe-stud" style="padding-top:26px">
+          <div class="sec" data-en="STUDENTS">学生</div>
+          <div class="pgrid"></div>
+        </section>
+        <section class="sect" id="pe-alum" style="padding-top:26px">
+          <div class="sec" data-en="ALUMNI">校友</div>
+          <div class="pgrid"></div>
+        </section>
+        <section class="sect" id="pp-join" style="padding-top:26px">
+          <div class="sec" data-en="JOIN US">加入我们</div>
+          <div class="overview">
+            <p data-en="Students and scholars interested in information fusion and unmanned systems are welcome to contact us. Openings: faculty, postdocs and graduate students.">欢迎对信息融合与无人系统方向感兴趣的同学与学者联系我们。招聘方向：教职、博士后与研究生。</p>
+          </div>
+          <div class="row" style="margin-top:0">
+            <button class="btn" id="joinContact" type="button" data-en="CONTACT US →">联系我们 →</button>
+            <a class="btn ghosted" href="upload/pdfs/2023%20SJTU_Faculty.pdf" target="_blank" rel="noopener" data-en="FACULTY PROGRAM ↗">教职计划 ↗</a>
+            <a class="btn ghosted" href="upload/pdfs/2023%20SJTU_Postdoc.pdf" target="_blank" rel="noopener" data-en="POST-DOC PROGRAM ↗">博士后计划 ↗</a>
+            <a class="btn ghosted" href="upload/pdfs/2023_01SJTU_Student.pdf" target="_blank" rel="noopener" data-en="STUDENT PROGRAM ↗">学生计划 ↗</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- RESEARCH -->
+      <div class="page sidepage" id="page-research">
+        <section class="sect" id="r-pubs">
+          <div class="sec" data-en="PUBLICATIONS">最新成果</div>
+          <div class="ptools">
+            <input id="pubSearch" type="search" placeholder="搜索标题 / 作者 / 年份…" data-en-ph="Search title / author / year…" autocomplete="off">
+            <div class="pchips" id="pubChips">
+              <button class="on" data-t="全部" type="button" data-en="ALL">全部</button>
+              <button data-t="期刊" type="button" data-en="JOURNAL">期刊</button>
+              <button data-t="会议" type="button" data-en="CONF.">会议</button>
+              <button data-t="专著" type="button" data-en="BOOK">专著</button>
+            </div>
+            <div class="pcount" id="pubCount"></div>
+          </div>
+          <ul class="publist" id="pubList"></ul>
+        </section>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="page sidepage" id="page-contact">
+        <section class="sect">
+          <div class="sec" data-en="CONTACT US">联系我们</div>
+          <ul class="clist">
+            <li><span class="k" data-en="EMAIL">邮箱</span><a href="mailto:fusion@sjtu.edu.cn">fusion@sjtu.edu.cn</a></li>
+            <li><span class="k" data-en="ADDRESS">地址</span><span data-en="Building 2, SEIEE Cluster, SJTU Minhang Campus, 800 Dongchuan Road, Shanghai">上海市闵行区东川路800号上海交通大学闵行校区，电子信息与电气工程学院2号楼</span></li>
+            <li><span class="k" data-en="ICP">备案</span><span data-en="ICP: 沪交ICP备20230005">沪交ICP备20230005</span></li>
+          </ul>
+          <div class="row">
+            <button class="btn ghosted" id="siteBack" type="button" data-en="← BACK TO CUBE">← 返回魔方</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- footer — mirrors the original webpage -->
+      <div class="sitefooter">
+        <h4 data-en="CONTACT INFORMATION">联系信息</h4>
+        <ul>
+          <li><span data-en="Email: ">电子邮件：</span><a href="mailto:fusion@sjtu.edu.cn">fusion@sjtu.edu.cn</a></li>
+          <li data-en="Address: Building 2, SEIEE Cluster, SJTU Minhang Campus, 800 Dongchuan Road, Shanghai">地址：上海市闵行区东川路800号上海交通大学闵行校区，电子信息与电气工程学院2号楼</li>
+          <li data-en="ICP: 沪交ICP备20230005">备案号：沪交ICP备20230005</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ external redirect ============ -->
+    <div class="site" id="extSite">
+      <div class="frame"><b data-en="OPENING">正在打开</b><br><span id="extName"></span><span data-en=" — redirecting…">，即将跳转…</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <a href="mailto:fusion@sjtu.edu.cn">fusion@sjtu.edu.cn</a>
+  <span data-en="800 Dongchuan Rd, Shanghai · SEIEE Building 2">上海市闵行区东川路800号 电子信息与电气工程学院2号楼</span>
+  <span>沪交ICP备20230005</span>
+</footer>
+
+<div class="reader" id="reader" hidden>
+  <div class="rd-box" role="dialog" aria-modal="true">
+    <button class="rd-close" id="rdClose" type="button" aria-label="close">✕</button>
+    <img id="rdImg" alt="">
+    <div class="rd-meta" id="rdMeta"></div>
+    <h3 id="rdTitle"></h3>
+    <div class="rd-body" id="rdBody"></div>
+    <a id="rdLink" href="#" target="_blank" rel="noopener" data-en="ORIGINAL ARTICLE ↗">原文链接 ↗</a>
+  </div>
+</div>
+
+<script src="assets/js/config.js?v=43"></script>
+<script src="assets/js/content/portals.js?v=43"></script>
+<script src="assets/js/content/news.js?v=43"></script>
+<script src="assets/js/content/team.js?v=43"></script>
+<script src="assets/js/content/pubs.js?v=43"></script>
+<script src="assets/js/content/projects.js?v=43"></script>
+<script src="assets/js/content/collab.js?v=43"></script>
+<script src="assets/js/app.js?v=43"></script>
+<script>
+/* diagnostic: if assets/ was not copied next to index.html, say so visibly */
+window.addEventListener('load', function(){
+  if(!window.SITE){
+    document.body.insertAdjacentHTML('afterbegin',
+      '<div style="position:fixed;inset:auto 0 0 0;z-index:999;background:#7a1f2b;color:#fff;'+
+      'font:13px/1.6 monospace;padding:12px 18px;text-align:center">'+
+      '⚠ assets/ 文件夹未找到 — 请将 index.html 与 assets/ 目录放在一起。 '+
+      'The assets/ folder is missing — keep index.html and assets/ together.</div>');
+  }
+});
+</script>
+
+
+</body>
+</html>
